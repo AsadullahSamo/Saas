@@ -1,0 +1,15 @@
+// Generates from 1 to 3 including 3
+@for $i from 1 through 3 {
+  .item-#{$i} { 
+    width: 100px * $i; 
+    background: darken(pink, $i);
+  }
+}
+
+// Generates from 1 to 3 excluding 3
+@for $i from 1 to 3 {
+  .list-#{$i} { 
+    width: 100px * $i; 
+    background: lighten(pink, $i);
+  }
+}

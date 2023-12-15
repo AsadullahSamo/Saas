@@ -1,0 +1,36 @@
+// @each is used to iterate over lists and maps.
+// Syntax: @each $var in <list or map> {statement}
+
+// Example:
+$list: (normal, bold, italic);
+@each $font in $list {
+  .#{$font} { font-weight: $font; }
+}
+
+// Using @each to iterate over a multi dimensional list
+$multilist: ((normal 100px), (bold 200px), (italic 300px));
+@each $font, $size in $multilist {
+  .#{$font} { 
+    font-weight: $font; 
+    font-size: $size; 
+  }
+}
+
+// Using @each to iterate over a map
+$map: (normal: 100px, bold: 200px, italic: 300px);
+@each $font, $size in $map {
+  .#{$font} { 
+    font-weight: $font; 
+    font-size: $size; 
+  }
+}
+
+
+// Using @while example to generate a list of classes
+$i: 1;
+@while $i < 5 {
+  .item-#{$i} { width: 100px * $i; }
+  $i: $i + 1;
+}
+
+

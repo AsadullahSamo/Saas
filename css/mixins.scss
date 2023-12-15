@@ -1,0 +1,72 @@
+/* 
+- Mixins are like functions 
+- They can be used to reuse diff vals with same properties like using functions
+- Mixins can have one, two, multiple, or no parameters at all like functions
+- Ex:  We've two classes with properties
+
+.abc{
+    bordset-props: 10px;
+    background-color: red;
+    height: 20px;
+}
+.xyz{
+    bordset-props: 20px;
+    background-color: blue;
+    height: 10px;
+}
+
+- In above examples, we've same 3 properties with diff values. We can use mixins to 
+  simplify and make code reusable
+
+- Syntax: @mixin <mixin-name> function-name() { }
+and then to use
+@inclue function-call()
+
+*/
+
+@mixin set-props($bg-value, $width: 100px, $height: 100px){   // default val for width and height
+  background-color: $bg-value;
+  width: $width;
+  height: $height;
+  padding: 15px;
+}
+@mixin box-shadow($x, $y, $blur, $color){
+  box-shadow: $x $y $blur $color;
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font: 18px/24px arial;
+}
+div{
+  margin:0 0 15px 15px;
+}
+#first{
+  // background: DarkSlateBlue ;
+  // width: 150px;
+  // height: 150px;
+  // padding: 15px;       --> We set it by default 15px in our mixin definiton
+  // box-shadow: 3px 3px 1px black
+  @include set-props(DarkSlateBlue, 150px, 150px);
+  @include box-shadow(3px, 3px, 1px, black)
+}
+
+#second{
+  // background: DarkSeaGreen;
+  // width: 400px;
+  // height: 200px;
+  // padding: 15px;       
+  // box-shadow: -3px -3px 3px black
+  @include set-props(DarkSeaGreen, 400px, 200px);
+  @include box-shadow(-3px, -3px, 3px, black);
+}
+
+#third{
+  // background: HotPink;
+  // width: 600px;
+  // height: 300px;
+  // padding: 15px;
+  @include set-props(HotPink, 600px, 300px);
+}

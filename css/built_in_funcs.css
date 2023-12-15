@@ -1,0 +1,63 @@
+.num-funcs {
+  width: 10px;
+  height: 5px;
+  font-size: 4px;
+  padding-top: 6;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  padding-right: 200%;
+  margin-left: false;
+  margin-right: true;
+  margin-top: "px";
+  margin-top: true;
+}
+
+.string-funcs {
+  font-family: "arial";
+  font-family: arial;
+  font-family: "ARIAL";
+  font-size: 4;
+  font-size: 6;
+  background-image: "The  Witcher3";
+  background-position: "script";
+}
+
+.list-funcs {
+  padding-left: 3;
+  padding-right: 2;
+  padding-top: 10px;
+  padding-bottom: 10px, 5px, 30px;
+  margin-top: 10px, 20px, 30px, 40px, 50px;
+  margin-bottom: red 10px, green 20px;
+  margin-left: 2;
+  margin-right: comma;
+  margin-right: space;
+}
+
+ul li {
+  width: 10px;
+}
+
+a.active {
+  width: 10px;
+  background-image: url(a.link);
+}
+
+.test {
+  font-weight: 500;
+  font-size: "regular", "medium", "bold";
+  height: 400, 500, 700;
+  width: "regular", "medium", "bold", "lightest", "light";
+  color: true;
+  border: 500, 700;
+}
+
+.introspection-funcs {
+  padding: true;
+  margin: true;
+  color: true;
+  color: false;
+  font-size: string;
+  font-family: list;
+  float: 10px;
+}/*# sourceMappingURL=built_in_funcs.css.map */

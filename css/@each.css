@@ -1,0 +1,41 @@
+.normal {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-weight: italic;
+}
+
+.normal {
+  font-weight: normal;
+  font-size: 100px;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 200px;
+}
+
+.italic {
+  font-weight: italic;
+  font-size: 300px;
+}
+
+.normal {
+  font-weight: normal;
+  font-size: 100px;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 200px;
+}
+
+.italic {
+  font-weight: italic;
+  font-size: 300px;
+}/*# sourceMappingURL=@each.css.map */

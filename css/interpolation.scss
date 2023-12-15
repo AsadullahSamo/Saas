@@ -1,0 +1,16 @@
+// Interpolation is simply combining two names for props
+@mixin margin($pos, $unit) {
+    margin-#{$pos}: $unit + px;    // simply means margin-left: 10px
+    // Here we combined margin and left string 
+}
+.test {
+ @include margin(left, 10)
+}
+
+@mixin set-icon($name) {
+    background-image: url("/icons/#{$name}.png");
+}
+
+.icon{
+    @include set-icon(duck)
+}

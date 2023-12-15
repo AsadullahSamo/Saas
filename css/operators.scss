@@ -1,0 +1,35 @@
+// - Operators are mostly used with loops OR conditions but here just for understanding 
+//   we'll use it with css properties dumbly 
+// - View operators.css file to see all results
+
+// 1. Equality (==, !=)
+.test1{
+    padding: 10 == 10px;    // returns false
+    color: arial == 'arial'; // returns true
+    float: 5 != 5; // returns false
+}
+
+// 2. Relational (<, <=, >, >=)
+.test2{
+    padding: 11px < 10px; // returns false 
+    color: 5 > 2;         // returns true
+    background-color: 1000ms >= 1s; // returns true
+    float: 10 <= 5; // returns false
+}
+
+// 3. Boolean (and, or, not)
+.test3{
+    padding: 10em == 10px and 5 > 2; // returns false (as em is greater unit than px so 1st condition is false)
+    color:  1000ms >= 1s or 10 <= 5;         // returns true because 1st condition is true
+    background-color: not 5 == 5; // returns false (as 5 == 5 evalues to true) and not true = false
+}
+
+// 4. String (+) and 5. Numeric (+, -, *, /, %)
+$val1: 10;
+$val2: 20;
+.test4{
+    padding: 5 + px;               // returns 10px
+    color: $val1 * 2 + px;         // returns 20px
+    background-color: $val2 % $val1; // returns 0
+    // and so on for / and %
+}

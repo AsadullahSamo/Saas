@@ -1,0 +1,17 @@
+.mybox {
+  padding: 20px;
+  margin: 100px;
+  width: 200px;
+  font-family: arial;
+  background-color: #fff;
+  color: #000;
+}
+
+.mybox2 {
+  padding: 20px;
+  margin: 100px;
+  width: 200px;
+  font-family: arial;
+  background-color: #000;
+  color: #fff;
+}/*# sourceMappingURL=@if else.css.map */

@@ -1,0 +1,37 @@
+$base-color : #ff8800;
+
+#first, #second{
+  width: 400px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+}
+
+#first{
+  background: $base-color;
+}
+
+#second{
+//   background: darken($base-color,30);  // darken given color upto given value (darkens pink 70% in this case)
+//   background: lighten($base-color,20); // opposite of darken
+  // darken and lighten maybe useful in hover effect
+
+//   background: adjust-hue($base-color,80);
+  
+//   background: saturate($base-color,90);
+  
+//   background: desaturate($base-color,30);
+//   background: desaturate($base-color,0);
+//   background: desaturate($base-color,100);
+  
+  background: mix($base-color,red,50); // mix red 50% in $base-color
+//   background: mix($base-color,yellow,50);
+  
+//   background: hue($base-color);
+  
+//   background: saturation($base-color);
+  
+//   background: lightness($base-color);
+  
+//   background: alpha($base-color);
+}

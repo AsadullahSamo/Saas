@@ -1,0 +1,25 @@
+// Syntax: @if condition {statement}
+@mixin box($value) {
+    padding:20px;
+    margin: 100px;
+    width: 200px;
+    font-family: arial;
+
+    @if $value==dark {
+        background-color: #000;
+        color: #fff;
+    } @else if $value==light {
+        background-color: #fff;
+        color: #000;
+    } @else {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+.mybox {
+    @include box(light);
+}
+.mybox2 {
+    @include box(dark);
+}

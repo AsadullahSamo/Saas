@@ -1,0 +1,44 @@
+// The @extend directive lets you share a set of CSS properties from one selector to another.
+// The @extend directive is useful if you have almost identically styled elements that only differ in some small details.
+// The @extend directive is used to share styles between selectors. It’s important to note that the @extend directive should only be used when you want to share styles between two selectors that have a lot in common.
+
+*{
+    box-sizing: border-box;
+  }
+  h1{
+    font-family: arial;
+    font-size: 30px;
+    padding-left: 20px;
+  }
+  
+  #first{
+    background: HotPink ;
+    width: 500px;
+    font-family: arial;
+    font-size: 16px;
+    margin:0 0 15px 15px;
+    padding: 15px;
+    @extend %placeholder;
+  }
+  
+  #second{
+    background: DarkSeaGreen;
+    width: 400px;
+    @extend #first;      // Copy all #first code and overwrite background and widht
+    @extend %placeholder;
+  }
+  
+  #third{
+    background: Aqua ;
+    width: 600px;
+    @extend #first;
+    @extend %placeholder;
+  }
+  
+  // Extend with placeholder
+  // Placeholder will only act as reusable code and will not be shown in css file
+
+ %placeholder{        // placeholder can have any name
+    color: whitesmoke;
+ }
+  

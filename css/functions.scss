@@ -1,0 +1,11 @@
+// functions can return value while mixin can't
+
+$container-width: 1000;
+
+@function half($width) {
+    @return $width / 2 + px;
+}
+
+.container{
+    width: half($container-width);
+}

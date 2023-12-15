@@ -1,0 +1,30 @@
+.container {
+    width: 1100px;
+    margin: 0 auto;
+
+    // This is @media directive where we don't have to write container again
+    @media screen and (max-width: 1150px) {
+        width: 900px;
+    }
+    @media screen and (max-width: 950px) {
+        width: 700px;
+    }
+}
+
+
+// @at-root used for just hiding redundant (reused over and over) parent class
+// Just wrap code in @at-root till you want its effect
+
+.first{
+    color: green;
+
+    @at-root { // removes .first from .second and .third
+        .second {
+            color: red;
+
+            .third {
+                color: beige;
+            }
+        }
+    }
+}

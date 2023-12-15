@@ -1,0 +1,90 @@
+// 1. Number functions
+.num-funcs {
+    width: abs(-10px);
+    height: ceil(4.2px);
+    font-size: floor(4.7px);
+    padding-top: round(5.65);
+    padding-bottom: max(1px, 2px);
+    padding-left: min(1px, 2px);
+    padding-right: percentage(100px / 50px);
+    margin-left: comparable(2px, 1em); // whether 2 units are comparable or not (false in this case)
+    margin-right: comparable(2ms, 1s); // returns true
+    margin-top: unit(100px);    // extracts unit
+    margin-top: unitless(10);    // whether unit is passed or not (true in this case)
+}
+
+// 2. String functions
+.string-funcs {
+    font-family: quote(arial);   // returns value in quote
+    font-family: unquote("arial");   // removes quotes from values
+    font-family: to-upper-case("arial");   // also to-lower-case(value)
+    font-size: str-length("Asad");    // returns string length
+    font-size: str-index("Helvetica", "t");    // finds index of t
+    background-image: str-insert("The 3", " Witcher", 5); // Insert Witcher at index 5 in The 3 (It becomes The Witcher 3)
+    background-position: str-slice("Javascript is best", 5, 10)
+}
+
+// 3. List functions
+// List are same as arrays in other Programming Languages
+
+$list1: 10px, 20px, 30px;
+$list2: 40px 50px;
+.list-funcs {
+    padding-left: length($list1); // returns 3
+    padding-right: length((width: 12px, height: 5px)); // returns 2
+    padding-top: nth($list1, 1); // Which value is at index 1 (10px)
+    padding-bottom: set-nth($list1, 2, 5px);
+    margin-top: join($list1, $list2);
+    margin-bottom: zip((red, green), (10px, 20px)); // Combines 10px with red, 20px with green and so on
+    margin-left: index($list1, 20px);
+    margin-right: list-separator($list1);   // Which separator is being used in list (comma in this case)
+    margin-right: list-separator($list2);   // Which separator is being used in list (comma in this case)
+}
+
+// 4. Selector Functions --> used to deal/manipulate selectors (like .abc a { } a is selector)
+$selector: selector-nest("ul", li);
+$selector-append: selector-append("a", ".active");
+
+#{$selector} {
+    width: 10px;
+}
+#{$selector-append} {
+    width: 10px;
+    background-image: url(selector-replace("a.active", ".active", ".link"))
+}
+
+
+// 5. Map Functions
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+$light-weights: ("lightest": 100, "light": 300);
+$merge: map-merge($font-weights, $light-weights);
+$map-remove: map-remove($font-weights, "regular");
+
+.test {
+    font-weight: map-get($font-weights, "medium");
+    font-size: map-keys($font-weights);
+    height: map-values($font-weights);
+    width: map-keys($merge);
+    color: map-has-key($font-weights, "medium");
+    border: map-values($map-remove);
+}
+
+// 6. Introspection functions --> used for conditions
+$num: 10px;
+$char: "Arial";
+$list: 10px 20px 30px;
+$map: ("regular": 400, "medium": 500);
+
+@mixin br-radius {
+    border-radius: 5px;
+}
+
+.introspection-funcs {
+    padding: variable-exists(num);
+    margin: global-variable-exists(char);
+    color: mixin-exists(br-radius);
+    color: function-exists(br-radius);
+    font-size: type-of($char);
+    font-family: type-of($list);
+    float: inspect($num); // just prints value
+}

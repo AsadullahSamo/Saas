@@ -1,0 +1,59 @@
+/* 
+- Mixins are like functions 
+- They can be used to reuse diff vals with same properties like using functions
+- Mixins can have one, two, multiple, or no parameters at all like functions
+- Ex:  We've two classes with properties
+
+.abc{
+    bordset-props: 10px;
+    background-color: red;
+    height: 20px;
+}
+.xyz{
+    bordset-props: 20px;
+    background-color: blue;
+    height: 10px;
+}
+
+- In above examples, we've same 3 properties with diff values. We can use mixins to 
+  simplify and make code reusable
+
+- Syntax: @mixin <mixin-name> function-name() { }
+and then to use
+@inclue function-call()
+
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 18px/24px arial;
+}
+
+div {
+  margin: 0 0 15px 15px;
+}
+
+#first {
+  background-color: DarkSlateBlue;
+  width: 150px;
+  height: 150px;
+  padding: 15px;
+  box-shadow: 3px 3px 1px black;
+}
+
+#second {
+  background-color: DarkSeaGreen;
+  width: 400px;
+  height: 200px;
+  padding: 15px;
+  box-shadow: -3px -3px 3px black;
+}
+
+#third {
+  background-color: HotPink;
+  width: 600px;
+  height: 300px;
+  padding: 15px;
+}/*# sourceMappingURL=mixins.css.map */

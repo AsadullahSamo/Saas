@@ -1,0 +1,24 @@
+.test1 {
+  padding: false;
+  color: true;
+  float: false;
+}
+
+.test2 {
+  padding: false;
+  color: true;
+  background-color: true;
+  float: false;
+}
+
+.test3 {
+  padding: false;
+  color: true;
+  background-color: false;
+}
+
+.test4 {
+  padding: 5px;
+  color: 20px;
+  background-color: 0;
+}/*# sourceMappingURL=operators.css.map */

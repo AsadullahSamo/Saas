@@ -1,0 +1,85 @@
+@import "../partials/header";
+@import "../partials/menu";
+@import "../partials/footer";
+@import "../partials/media";
+
+
+// Nesting in #top-bar, #header, #menu, #content, #sidebar
+*{
+  box-sizing: border-box;
+}
+body{
+  font: 18px/24px $main-font;
+  background: slategrey;
+}
+#wrapper{
+  border:1px solid $border-color;
+  width: 1000px;
+  background: white;
+  margin: 0 auto;
+}
+
+#top-bar{
+  background: MEDIUMPURPLE;
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+        display: inline-block;
+        margin: 5px;
+
+        a{
+            color: #fff;
+            font-size: 20px;
+        }
+        &:hover{
+            color: $main-color;
+        }
+    }
+  }
+  
+  
+}
+
+
+
+
+#content{
+  width:795px;
+  min-height:500px;
+  padding: 15px;
+  float:left;
+  box-sizing:border-box;
+  position:relative;
+
+  ::selection{
+    background: $main-color;
+    color: #fff;
+  }
+  h2{
+    font-family: $main-font;
+  }
+}
+
+
+#sidebar{
+  background: LAVENDER;
+  width:200px;
+  min-height:500px;
+  float:right;
+  border-left: 1px solid $border-color;
+  
+  a{
+    text-decoration:none;
+    color:black;
+
+    &:hover{
+        color: $main-color;
+    }
+  }
+  
+
+}
+
+

@@ -1,0 +1,10 @@
+- Saas is compiled to CSS through Compilers like Koala or extensions like live Saas compiler
+because browsers understand CSS not Saas
+- Partials can be used to part multiple files and then import them. All partials filenames should start with "_"
+Like, we made 
+	_header.scss	_menu.scss	_footer.scss
+and then import them in style.scss like (syntax: @import "path”)
+	@import "header"
+	@import "menu"
+	@import "footer"
+
